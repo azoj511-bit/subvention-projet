@@ -25,6 +25,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    word-wrap: break-word; /* Prevent long links from breaking layout */
 }
 
 a {
@@ -609,4 +610,8 @@ img {
     .team-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2.5rem; }
+    .logo { font-size: 1.1rem; }
+    .custom-gtranslate { transform: scale(0.7); transform-origin: left center; }
+    .nav-left { gap: 10px; }
+    .whatsapp-float { bottom: 15px; right: 15px; width: 45px; height: 45px; font-size: 22px; }
 }
