@@ -171,12 +171,14 @@ img {
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
+    overflow: visible !important;
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: visible !important;
 }
 
 .logo {
@@ -234,10 +236,12 @@ img {
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-left: auto; /* Push to the right */
 }
 
 .gtranslate_wrapper {
-    margin-top: 5px; /* Lower it slightly as requested */
+    margin-top: 15px; /* Lower it more as requested */
+    z-index: 9999;
 }
 
 @media (max-width: 768px) {
