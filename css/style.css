@@ -65,14 +65,14 @@ img {
 }
 
 .dark-bg {
-    background-color: #0a0a0a;
-    color: #fff;
+    background-color: #0a0a0a !important;
+    color: #fff !important;
 }
-.dark-bg p, .dark-bg li {
-    color: rgba(255, 255, 255, 0.8);
+.dark-bg p, .dark-bg li, .dark-bg h3, .dark-bg span, .dark-bg div {
+    color: #ffffff !important;
 }
 .dark-bg h2 {
-    color: #fff;
+    color: #fff !important;
 }
 
 .section-title h2 {
@@ -232,6 +232,18 @@ img {
 }
 
 /* GTranslate Customization */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between logo and translate widget */
+}
+
+.custom-gtranslate {
+    transform: scale(0.9); /* Slightly smaller as requested */
+    transform-origin: left center;
+    z-index: 9999;
+}
+
 .nav-right {
     display: flex;
     align-items: center;
@@ -239,12 +251,13 @@ img {
     margin-left: auto; /* Push to the right */
 }
 
-.gtranslate_wrapper {
-    margin-top: 15px; /* Lower it more as requested */
-    z-index: 9999;
-}
-
 @media (max-width: 768px) {
+    .nav-left {
+        gap: 15px;
+    }
+    .custom-gtranslate {
+        transform: scale(0.85); /* Even smaller on mobile */
+    }
     .nav-right {
         order: 2;
     }
