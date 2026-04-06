@@ -82,7 +82,7 @@ if (contactForm) {
         contactForm.reset();
         
         setTimeout(() => {
-            submitBtn.innerText = 'Envoyer le message';
+            submitBtn.innerText = 'Soumettre la demande';
             submitBtn.disabled = false;
         }, 2000);
     });
