@@ -97,62 +97,147 @@
             </div>
             
             <form id="loanForm" class="contact-form" style="max-width: 850px; margin: 0 auto;">
+
+                <!-- === Section 1: Informations Personnelles === -->
+                <h4 style="font-family: var(--font-heading); color: var(--accent-gold); border-bottom: 1px solid #e0d8c0; padding-bottom: 10px; margin-bottom: 20px; margin-top: 10px;">
+                    <i class="fa-solid fa-user" style="margin-right: 8px;"></i> Informations Personnelles
+                </h4>
                 <div class="grid-2">
                     <div class="form-group">
-                        <label class="form-label">Nom et Prénom</label>
+                        <label class="form-label">Noms et Prénoms <span style="color:red">*</span></label>
                         <input type="text" id="loanName" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Adresse Email</label>
-                        <input type="email" id="loanEmail" class="form-control" required>
+                        <label class="form-label">Date et lieu de Naissance <span style="color:red">*</span></label>
+                        <input type="text" id="loanBirth" class="form-control" placeholder="Ex: 01/01/1990, Paris" required>
                     </div>
                 </div>
                 <div class="grid-2">
                     <div class="form-group">
-                        <label class="form-label">Numéro de téléphone</label>
+                        <label class="form-label">Nationalité <span style="color:red">*</span></label>
+                        <input type="text" id="loanNationality" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Code Postal <span style="color:red">*</span></label>
+                        <input type="text" id="loanPostal" class="form-control" required>
+                    </div>
+                </div>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label">Ville <span style="color:red">*</span></label>
+                        <input type="text" id="loanCity" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Pays <span style="color:red">*</span></label>
+                        <input type="text" id="loanCountry" class="form-control" placeholder="Ex: France, Belgique..." required>
+                    </div>
+                </div>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label">Téléphone <span style="color:red">*</span></label>
                         <input type="tel" id="loanPhone" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Situation Professionnelle</label>
-                        <select id="loanJob" class="form-control" required>
-                            <option value="">Sélectionnez...</option>
-                            <option value="Employé">Employé</option>
-                            <option value="Indépendant">Indépendant(e)</option>
-                            <option value="Sans-emploi">Sans-emploi</option>
-                            <option value="Retraité">Retraité(e)</option>
-                            <option value="Entreprise">Entreprise</option>
-                        </select>
+                        <label class="form-label">E-Mail <span style="color:red">*</span></label>
+                        <input type="email" id="loanEmail" class="form-control" required>
                     </div>
                 </div>
+
+                <!-- === Section 2: Informations sur le Prêt === -->
+                <h4 style="font-family: var(--font-heading); color: var(--accent-gold); border-bottom: 1px solid #e0d8c0; padding-bottom: 10px; margin-bottom: 20px; margin-top: 30px;">
+                    <i class="fa-solid fa-coins" style="margin-right: 8px;"></i> Détails du Prêt
+                </h4>
                 <div class="grid-2">
                     <div class="form-group">
-                        <label class="form-label">Montant souhaité (€)</label>
-                        <input type="number" id="loanAmount" class="form-control" min="1000" max="2000000" required>
+                        <label class="form-label">Montant du prêt (€) <span style="color:red">*</span></label>
+                        <input type="number" id="loanAmount" class="form-control" min="1000" max="2000000" placeholder="Entre 1 000 et 2 000 000 €" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Durée du prêt (Mois)</label>
+                        <label class="form-label">Durée de remboursement (Mois) <span style="color:red">*</span></label>
                         <input type="number" id="loanDuration" class="form-control" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Type de prêt</label>
+                    <label class="form-label">Objet du prêt <span style="color:red">*</span></label>
                     <select id="loanType" class="form-control" required>
                         <option value="">Sélectionnez...</option>
-                        <option value="Projet">Financement de Projet</option>
+                        <option value="Consommation">Consommation</option>
                         <option value="Immobilier">Immobilier</option>
-                        <option value="Automobile">Automobile</option>
-                        <option value="Personnel">Personnel</option>
+                        <option value="Autre">Autre</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label class="form-label">Pays de résidence</label>
-                    <input type="text" id="loanCountry" class="form-control" placeholder="Ex: France, Belgique, Suisse..." required>
+
+                <!-- === Section 3: Situation Personnelle & Financière === -->
+                <h4 style="font-family: var(--font-heading); color: var(--accent-gold); border-bottom: 1px solid #e0d8c0; padding-bottom: 10px; margin-bottom: 20px; margin-top: 30px;">
+                    <i class="fa-solid fa-chart-line" style="margin-right: 8px;"></i> Situation Personnelle & Financière
+                </h4>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label">Situation Professionnelle <span style="color:red">*</span></label>
+                        <select id="loanJob" class="form-control" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="Employé">Employé</option>
+                            <option value="Retraité">Retraité</option>
+                            <option value="Sans-emploi">Sans-emploi</option>
+                            <option value="Indépendant">Indépendant</option>
+                            <option value="Entreprise">Entreprise</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Situation Matrimoniale <span style="color:red">*</span></label>
+                        <select id="loanMarital" class="form-control" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="Marié(e)">Marié(e)</option>
+                            <option value="Célibataire">Célibataire</option>
+                            <option value="Divorcé(e)">Divorcé(e)</option>
+                            <option value="Veuf/Veuve">Veuf / Veuve</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Informations Complémentaires</label>
-                    <textarea id="loanMessage" class="form-control" rows="4" placeholder="Décrivez brièvement votre projet ou votre besoin..."></textarea>
+                    <label class="form-label">Situation Financière – Revenu mensuel (€) <span style="color:red">*</span></label>
+                    <input type="number" id="loanIncome" class="form-control" placeholder="Ex: 2500" required>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Soumettre la demande <i class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></button>
+
+                <!-- === Section 4: Pièces Justificatives === -->
+                <h4 style="font-family: var(--font-heading); color: var(--accent-gold); border-bottom: 1px solid #e0d8c0; padding-bottom: 10px; margin-bottom: 15px; margin-top: 30px;">
+                    <i class="fa-solid fa-file-arrow-up" style="margin-right: 8px;"></i> Pièces Justificatives
+                </h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 20px;"><i class="fa-solid fa-circle-info" style="color: var(--accent-gold); margin-right: 5px;"></i> Formats acceptés : PDF ou image (JPG, PNG). Taille max : 10 Mo par fichier.</p>
+                
+                <div class="form-group">
+                    <label class="form-label">Pièce d'identité valide <span style="color:red">*</span></label>
+                    <input type="file" id="loanId" class="form-control" accept=".pdf,.jpg,.jpeg,.png" required style="padding: 8px;">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Justificatif de domicile (facture d'électricité ou d'eau) <span style="color:red">*</span></label>
+                    <input type="file" id="loanDomicile" class="form-control" accept=".pdf,.jpg,.jpeg,.png" required style="padding: 8px;">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Justificatif de revenu ou fiche de paie <span style="color:red">*</span></label>
+                    <input type="file" id="loanRevenue" class="form-control" accept=".pdf,.jpg,.jpeg,.png" required style="padding: 8px;">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Relevé bancaire récent <span style="color:red">*</span></label>
+                    <input type="file" id="loanBank" class="form-control" accept=".pdf,.jpg,.jpeg,.png" required style="padding: 8px;">
+                </div>
+
+                <!-- === Section 5: Déclaration === -->
+                <h4 style="font-family: var(--font-heading); color: var(--accent-gold); border-bottom: 1px solid #e0d8c0; padding-bottom: 10px; margin-bottom: 15px; margin-top: 30px;">
+                    <i class="fa-solid fa-pen-to-square" style="margin-right: 8px;"></i> Déclaration du Demandeur
+                </h4>
+                <div class="form-group">
+                    <textarea id="loanMessage" class="form-control" rows="4" placeholder="Je soussigné(e) certifie que les informations fournies sont exactes et sincères..." required></textarea>
+                </div>
+
+                <div style="background: #f8f6f0; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 0.85rem; color: var(--text-secondary);">
+                    <i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-gold); margin-right: 6px;"></i>
+                    <strong>Note :</strong> Après soumission, vous serez redirigé(e) vers WhatsApp avec vos informations pré-remplies. Les pièces justificatives devront être envoyées séparément via WhatsApp ou par email à <strong>subventionprojet@outlook.fr</strong>.
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px; padding: 15px; font-size: 1rem;">
+                    Soumettre la demande <i class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i>
+                </button>
             </form>
         </div>
     </section>

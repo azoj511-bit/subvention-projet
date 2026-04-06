@@ -91,19 +91,45 @@ if (loanForm) {
         e.preventDefault();
         const submitBtn = loanForm.querySelector('button[type="submit"]');
         const name = document.getElementById('loanName').value;
-        const email = document.getElementById('loanEmail').value;
+        const birth = document.getElementById('loanBirth').value;
+        const nationality = document.getElementById('loanNationality').value;
+        const postal = document.getElementById('loanPostal').value;
+        const city = document.getElementById('loanCity').value;
+        const country = document.getElementById('loanCountry').value;
         const phone = document.getElementById('loanPhone').value;
-        const job = document.getElementById('loanJob').value;
+        const email = document.getElementById('loanEmail').value;
         const amount = document.getElementById('loanAmount').value;
         const duration = document.getElementById('loanDuration').value;
         const type = document.getElementById('loanType').value;
-        const country = document.getElementById('loanCountry') ? document.getElementById('loanCountry').value : 'N/A';
+        const job = document.getElementById('loanJob').value;
+        const marital = document.getElementById('loanMarital').value;
+        const income = document.getElementById('loanIncome').value;
         const message = document.getElementById('loanMessage').value;
 
         submitBtn.innerText = 'Redirection...';
         submitBtn.disabled = true;
 
-        const text = `*Nouvelle Demande de Financement*\n\n*Nom complet* : ${name}\n*Email* : ${email}\n*Téléphone* : ${phone}\n*Pays de résidence* : ${country}\n\n-- *Détails du prêt* --\n*Type de prêt* : ${type}\n*Montant souhaité* : ${amount} €\n*Durée* : ${duration} mois\n*Situation Pro* : ${job}\n\n-- *Informations complémentaires* --\n${message}`;
+        const text = `*🏦 Nouvelle Demande de Financement*\n\n` +
+            `*— Informations Personnelles —*\n` +
+            `*Noms et Prénoms* : ${name}\n` +
+            `*Date & Lieu de Naissance* : ${birth}\n` +
+            `*Nationalité* : ${nationality}\n` +
+            `*Code Postal* : ${postal}\n` +
+            `*Ville* : ${city}\n` +
+            `*Pays* : ${country}\n` +
+            `*Téléphone* : ${phone}\n` +
+            `*E-Mail* : ${email}\n\n` +
+            `*— Détails du Prêt —*\n` +
+            `*Montant souhaité* : ${amount} €\n` +
+            `*Durée de remboursement* : ${duration} mois\n` +
+            `*Objet du prêt* : ${type}\n\n` +
+            `*— Situation Personnelle & Financière —*\n` +
+            `*Situation Professionnelle* : ${job}\n` +
+            `*Situation Matrimoniale* : ${marital}\n` +
+            `*Revenu mensuel* : ${income} €\n\n` +
+            `*— Déclaration —*\n${message}\n\n` +
+            `⚠️ *Les pièces justificatives seront à envoyer séparément.*`;
+
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
         loanForm.reset();
 
