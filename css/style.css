@@ -532,9 +532,10 @@ img {
 .footer-col h3, .footer-col h4 {
     font-family: var(--font-heading);
     margin-bottom: 20px;
+    color: #ffffff !important;
 }
-.footer-col p, .footer-col li {
-    color: var(--text-secondary);
+.footer-col p, .footer-col li, .footer-col a {
+    color: #ffffff !important;
     font-size: 0.95rem;
     margin-bottom: 10px;
 }
