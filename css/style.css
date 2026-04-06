@@ -263,6 +263,24 @@ img {
     }
 }
 
+/* Force GTranslate dropdown downwards */
+.gt_option {
+    top: 100% !important;
+    bottom: auto !important;
+    margin-top: 5px !important;
+    z-index: 10000 !important;
+}
+
+/* Better styling for the dropdown to ensure visibility */
+.gt-container {
+    overflow: visible !important;
+}
+
+.gt-menu, .gt_option {
+    max-height: 400px;
+    overflow-y: auto !important;
+}
+
 /* --- Hero Section --- */
 .hero {
     position: relative;
