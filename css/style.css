@@ -265,10 +265,12 @@ img {
 
 /* Force GTranslate dropdown downwards */
 .gt_option {
+    position: absolute !important;
     top: 100% !important;
     bottom: auto !important;
     margin-top: 5px !important;
     z-index: 10000 !important;
+    background: white;
 }
 
 /* Better styling for the dropdown to ensure visibility */

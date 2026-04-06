@@ -59,8 +59,7 @@ const checkScroll = () => {
 window.addEventListener('scroll', checkScroll);
 
 // Contact Form / Loan Application Helper
-const GMAIL_ADDRESS = 'subventionprojet@outlook.fr';
-const FORMSPREE_ID = ''; // Si vous avez un compte Formspree, mettez votre ID ici (ex: 'mknrekwy')
+const WHATSAPP_NUMBER = '33757756283';
 
 // Handle Contact Form Submission
 const contactForm = document.getElementById('contactForm');
@@ -73,34 +72,19 @@ if (contactForm) {
         const subject = document.getElementById('contactSubject').value;
         const message = document.getElementById('contactMessage').value;
         
-        const data = { name, email, subject, message };
+        submitBtn.innerText = 'Redirection...';
+        submitBtn.disabled = true;
+
+        const text = `*Nouveau Message de Contact*\n\n*Nom* : ${name}\n*Email* : ${email}\n*Sujet* : ${subject}\n\n*Message* :\n${message}`;
+        const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
         
-        if (FORMSPREE_ID) {
-            submitBtn.innerText = 'Envoi en cours...';
-            submitBtn.disabled = true;
-            fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-                method: 'POST',
-                body: JSON.stringify(data),
-                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    alert('Merci ! Votre message a été envoyé avec succès.');
-                    contactForm.reset();
-                } else {
-                    alert("Une erreur s'est produite. Veuillez réessayer.");
-                }
-            }).catch(error => {
-                alert("Une erreur s'est produite. Veuillez réessayer.");
-            }).finally(() => {
-                submitBtn.innerText = 'Envoyer le message';
-                submitBtn.disabled = false;
-            });
-        } else {
-            // Fallback to Gmail redirect
-            const emailBody = `Détails du message :%0ANom : ${name}%0AEmail : ${email}%0A%0A${message}`;
-            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${GMAIL_ADDRESS}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-            window.open(gmailUrl, '_blank');
-        }
+        window.open(waUrl, '_blank');
+        contactForm.reset();
+        
+        setTimeout(() => {
+            submitBtn.innerText = 'Envoyer le message';
+            submitBtn.disabled = false;
+        }, 2000);
     });
 }
 
@@ -119,44 +103,18 @@ if (loanForm) {
         const type = document.getElementById('loanType').value;
         const message = document.getElementById('loanMessage').value;
         
-        const data = {
-            _subject: `Demande de prêt - ${type} - ${name}`,
-            nom: name,
-            email: email,
-            telephone: phone,
-            type_pret: type,
-            montant: amount,
-            duree: duration,
-            situation: job,
-            message: message
-        };
+        submitBtn.innerText = 'Redirection...';
+        submitBtn.disabled = true;
+
+        const text = `*Nouvelle Demande de Financement*\n\n*Nom complet* : ${name}\n*Email* : ${email}\n*Téléphone* : ${phone}\n\n-- *Détails du prêt* --\n*Type de prêt* : ${type}\n*Montant souhaité* : ${amount} €\n*Durée* : ${duration} mois\n*Situation Pro* : ${job}\n\n-- *Informations complémentaires* --\n${message}`;
+        const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
         
-        if (FORMSPREE_ID) {
-            submitBtn.innerText = 'Envoi en cours...';
-            submitBtn.disabled = true;
-            fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-                method: 'POST',
-                body: JSON.stringify(data),
-                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    alert('Félicitations ! Votre demande a été transmise.');
-                    loanForm.reset();
-                } else {
-                    alert("Une erreur s'est produite lors de l'envoi.");
-                }
-            }).catch(error => {
-                alert("Erreur de connexion. Veuillez réessayer.");
-            }).finally(() => {
-                submitBtn.innerText = 'Soumettre la demande';
-                submitBtn.disabled = false;
-            });
-        } else {
-            // Fallback to Gmail redirect
-            const subject = `Demande de prêt - ${type} - ${name}`;
-            const emailBody = `Nouvelle demande de financement :%0A%0ANom complet : ${name}%0AEmail : ${email}%0ATéléphone : ${phone}%0A%0A-- Détails du prêt --%0AType de prêt : ${type}%0AMontant souhaité : ${amount} €%0ADurée : ${duration} mois%0ASituation Pro : ${job}%0A%0A-- Informations complémentaires --%0A${message}`;
-            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${GMAIL_ADDRESS}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-            window.open(gmailUrl, '_blank');
-        }
+        window.open(waUrl, '_blank');
+        loanForm.reset();
+        
+        setTimeout(() => {
+            submitBtn.innerText = 'Soumettre la demande';
+            submitBtn.disabled = false;
+        }, 2000);
     });
 }
