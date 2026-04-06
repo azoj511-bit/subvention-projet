@@ -80,7 +80,80 @@
                 <h2 style="font-family: var(--font-heading); margin-bottom: 30px;">Formulaire de Demande</h2>
             </div>
             
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfPP_ofHp73gdI6Y-xMz7dJvehBtLxjuPenx7_pFXR6Q_BWDg/viewform?embedded=true" width="100%" height="1100" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+            <!-- Intro block from Google Form -->
+            <div class="loan-intro-box" style="background: #f8f6f0; border-left: 4px solid var(--accent-gold); border-radius: 8px; padding: 20px 25px; margin-bottom: 30px; max-width: 850px; margin-left: auto; margin-right: auto;">
+                <h3 style="font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 10px;">Prêts Financiers et Investissements</h3>
+                <p style="margin-bottom: 12px; color: var(--text-secondary);">Vous êtes à la recherche d'un financement pour réaliser un projet, faire face à une situation urgente ou soutenir votre activité ? Nous mettons à votre disposition une solution de prêt flexible, accessible et adaptée à vos besoins.</p>
+                <ul style="list-style: none; padding: 0; color: var(--text-secondary); margin-bottom: 0;">
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--accent-gold);">Montants disponibles :</strong> de 1 000 € à 2 000 000 €</li>
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--accent-gold);">Taux d'intérêt :</strong> selon le montant et la durée</li>
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--accent-gold);">Durée de remboursement :</strong> flexible</li>
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--accent-gold);">Conditions d'éligibilité :</strong></li>
+                    <li style="padding-left: 15px; margin-bottom: 4px;">• Avoir plus de 18 ans</li>
+                    <li style="padding-left: 15px; margin-bottom: 4px;">• Présenter une pièce d'identité valide</li>
+                    <li style="padding-left: 15px; margin-bottom: 4px;">• Justifier de revenus ou de la capacité de remboursement</li>
+                    <li style="padding-left: 15px;">• Fournir les informations nécessaires à l'étude du dossier</li>
+                </ul>
+            </div>
+            
+            <form id="loanForm" class="contact-form" style="max-width: 850px; margin: 0 auto;">
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label">Nom et Prénom</label>
+                        <input type="text" id="loanName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Adresse Email</label>
+                        <input type="email" id="loanEmail" class="form-control" required>
+                    </div>
+                </div>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label">Numéro de téléphone</label>
+                        <input type="tel" id="loanPhone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Situation Professionnelle</label>
+                        <select id="loanJob" class="form-control" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="Employé">Employé</option>
+                            <option value="Indépendant">Indépendant(e)</option>
+                            <option value="Sans-emploi">Sans-emploi</option>
+                            <option value="Retraité">Retraité(e)</option>
+                            <option value="Entreprise">Entreprise</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label">Montant souhaité (€)</label>
+                        <input type="number" id="loanAmount" class="form-control" min="1000" max="2000000" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Durée du prêt (Mois)</label>
+                        <input type="number" id="loanDuration" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Type de prêt</label>
+                    <select id="loanType" class="form-control" required>
+                        <option value="">Sélectionnez...</option>
+                        <option value="Projet">Financement de Projet</option>
+                        <option value="Immobilier">Immobilier</option>
+                        <option value="Automobile">Automobile</option>
+                        <option value="Personnel">Personnel</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Pays de résidence</label>
+                    <input type="text" id="loanCountry" class="form-control" placeholder="Ex: France, Belgique, Suisse..." required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Informations Complémentaires</label>
+                    <textarea id="loanMessage" class="form-control" rows="4" placeholder="Décrivez brièvement votre projet ou votre besoin..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Soumettre la demande <i class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i></button>
+            </form>
         </div>
     </section>
 
