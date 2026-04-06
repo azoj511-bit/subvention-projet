@@ -58,23 +58,49 @@ const checkScroll = () => {
 
 window.addEventListener('scroll', checkScroll);
 
-// Contact Form / Loan Application Helper for Gmail Integration
+// Contact Form / Loan Application Helper
 const GMAIL_ADDRESS = 'subventionprojet@outlook.fr';
+const FORMSPREE_ID = ''; // Si vous avez un compte Formspree, mettez votre ID ici (ex: 'mknrekwy')
 
 // Handle Contact Form Submission
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
         const name = document.getElementById('contactName').value;
         const email = document.getElementById('contactEmail').value;
         const subject = document.getElementById('contactSubject').value;
         const message = document.getElementById('contactMessage').value;
         
-        const emailBody = `Détails du message :%0ANom : ${name}%0AEmail : ${email}%0A%0A${message}`;
+        const data = { name, email, subject, message };
         
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${GMAIL_ADDRESS}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-        window.open(gmailUrl, '_blank');
+        if (FORMSPREE_ID) {
+            submitBtn.innerText = 'Envoi en cours...';
+            submitBtn.disabled = true;
+            fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Merci ! Votre message a été envoyé avec succès.');
+                    contactForm.reset();
+                } else {
+                    alert("Une erreur s'est produite. Veuillez réessayer.");
+                }
+            }).catch(error => {
+                alert("Une erreur s'est produite. Veuillez réessayer.");
+            }).finally(() => {
+                submitBtn.innerText = 'Envoyer le message';
+                submitBtn.disabled = false;
+            });
+        } else {
+            // Fallback to Gmail redirect
+            const emailBody = `Détails du message :%0ANom : ${name}%0AEmail : ${email}%0A%0A${message}`;
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${GMAIL_ADDRESS}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            window.open(gmailUrl, '_blank');
+        }
     });
 }
 
@@ -83,6 +109,7 @@ const loanForm = document.getElementById('loanForm');
 if (loanForm) {
     loanForm.addEventListener('submit', function(e) {
         e.preventDefault();
+        const submitBtn = loanForm.querySelector('button[type="submit"]');
         const name = document.getElementById('loanName').value;
         const email = document.getElementById('loanEmail').value;
         const phone = document.getElementById('loanPhone').value;
@@ -92,10 +119,44 @@ if (loanForm) {
         const type = document.getElementById('loanType').value;
         const message = document.getElementById('loanMessage').value;
         
-        const subject = `Demande de prêt - ${type} - ${name}`;
-        const emailBody = `Nouvelle demande de financement :%0A%0ANom complet : ${name}%0AEmail : ${email}%0ATéléphone : ${phone}%0A%0A-- Détails du prêt --%0AType de prêt : ${type}%0AMontant souhaité : ${amount} €%0ADurée : ${duration} mois%0ASituation Pro : ${job}%0A%0A-- Informations complémentaires --%0A${message}`;
+        const data = {
+            _subject: `Demande de prêt - ${type} - ${name}`,
+            nom: name,
+            email: email,
+            telephone: phone,
+            type_pret: type,
+            montant: amount,
+            duree: duration,
+            situation: job,
+            message: message
+        };
         
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${GMAIL_ADDRESS}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-        window.open(gmailUrl, '_blank');
+        if (FORMSPREE_ID) {
+            submitBtn.innerText = 'Envoi en cours...';
+            submitBtn.disabled = true;
+            fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Félicitations ! Votre demande a été transmise.');
+                    loanForm.reset();
+                } else {
+                    alert("Une erreur s'est produite lors de l'envoi.");
+                }
+            }).catch(error => {
+                alert("Erreur de connexion. Veuillez réessayer.");
+            }).finally(() => {
+                submitBtn.innerText = 'Soumettre la demande';
+                submitBtn.disabled = false;
+            });
+        } else {
+            // Fallback to Gmail redirect
+            const subject = `Demande de prêt - ${type} - ${name}`;
+            const emailBody = `Nouvelle demande de financement :%0A%0ANom complet : ${name}%0AEmail : ${email}%0ATéléphone : ${phone}%0A%0A-- Détails du prêt --%0AType de prêt : ${type}%0AMontant souhaité : ${amount} €%0ADurée : ${duration} mois%0ASituation Pro : ${job}%0A%0A-- Informations complémentaires --%0A${message}`;
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${GMAIL_ADDRESS}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            window.open(gmailUrl, '_blank');
+        }
     });
 }
