@@ -230,16 +230,19 @@ img {
 }
 
 /* GTranslate Customization */
-.gtranslate_wrapper {
-    margin-left: 15px;
+.nav-right {
     display: flex;
     align-items: center;
+    gap: 15px;
+}
+
+.gtranslate_wrapper {
+    margin-top: 5px; /* Lower it slightly as requested */
 }
 
 @media (max-width: 768px) {
-    .gtranslate_wrapper {
-        margin-right: 15px;
-        order: 2; /* Position next to burger menu */
+    .nav-right {
+        order: 2;
     }
 }
 
