@@ -1,0 +1,215 @@
+CAHIER DES CHARGES
+ Site Web SubventionProjet.com
+ Document de specifications fonctionnelles et techniques
+Client
+Subvention Projet
+Type
+Site vitrine + formulaire de demande
+Secteur
+Intermediation financiere
+Date
+Avril 2026
+TABLE DES MATIERES
+1. Presentation generale
+2. Arborescence du site
+3. Page d'accueil - Sections detaillees
+4. Page Services
+5. Page Demande de pret
+6. Page A propos
+7. Page Contact
+8. Specifications techniques
+9. Elements graphiques
+10. Fonctionnalites cles
+1. PRESENTATION GENERALE
+Nom du projet : Subvention Projet
+Type de site : Site vitrine avec formulaire de demande de pret
+Secteur : Intermediation financiere (prets, investissements, credits)
+Langue principale : Francais (traduction multilingue via Google Translate)
+Adresse : 66, Avenue d'Iena 75116 Paris, France
+Telephone : +33644670841
+Horaires : Lun - Sam : 8h00 - 17h00
+SUBVENTION PROJET est une entreprise d'intermediation financiere proposant un large eventail
+de solutions d'investissement et de credit adaptees aux besoins de divers groupes : personnes sans
+emploi, retraites, travailleurs, commercants, investisseurs et entreprises. L'entreprise propose un
+taux de remboursement competitif de 2%.
+2. ARBORESCENCE DU SITE
+Page
+URL
+Description
+Accueil
+/
+Page principale avec hero, services, equipe, temoignages
+Services
+/services
+Grille de 6 services avec images et descriptions
+Demande de pret
+/loan-application
+Formulaire de demande de pret
+A propos
+/about-us
+Presentation de l'entreprise
+Contact
+/contact-us
+Formulaire de contact
+3. PAGE D'ACCUEIL - SECTIONS DETAILLEES
+3.1 Header (present sur toutes les pages)
+ Logo "SUBVENTION PROJET" avec icone stylisee
+ Barre d'informations : Localisation, Telephone, Horaires (avec icones)
+ Menu de navigation : HOME | SERVICES | LOAN APPLICATION | ABOUT US | CONTACT US
+ Icones de recherche et menu hamburger pour le mobile
+3.2 Hero Banner (Carrousel)
+Image plein ecran montrant des professionnels en tenue d'affaires. Titre principal : "The fastest way
+to get your loan". Fond sombre semi-transparent sur l'image.
+3.3 Section Services (3 cartes)
+Service
+Description
+ON-TIME SERVICE
+Service rapide et efficace, demandes traitees sans delai
+A TEAM OF PROFESSIONALS
+Equipe dediee, a l'ecoute, accompagnement a chaque etape
+ANALYZE YOUR BUSINESS
+Identification des forces, faiblesses et opportunites
+3.4 Section "25 years of financial services"
+Sous-titre : "We care about your projects". Quatre cartes de services :
+Service
+Description
+Financial Planning
+Planification financiere adaptee aux objectifs du client
+Insurance Planning
+Strategie d'assurance personnalisee
+Capital Markets
+Acces aux opportunites des marches de capitaux
+Technology Consulting
+Conseils technologiques pour les defis numeriques
+3.5 Section Avantages (4 elements)
+ Flexible repayment - Remboursement a votre rythme
+ Easy experience - Procedure adaptee a votre situation
+ Customer-oriented - Services sur mesure
+ Rapid Mobility - Services accessibles dans le monde entier
+3.6 Section CTA (Call to Action)
+Titre : "We are available to help you with any financial needs! Get a fast loan with no paperwork
+required." Texte descriptif sur le processus personnalise de pret. Bouton d'action vers la demande.
+3.7 Section A propos
+Texte de presentation de l'entreprise avec compteurs animes :
+Compteur
+Valeur
+Clients satisfaits
+85%
+Taux de conversion
+50%
+Annees d'experience
+70
+Nombre de clients
+0K+ (animation)
+Satisfaction
+0% (animation)
+3.8 Section "Vous faites face a des defis"
+Texte sur l'investissement a long terme, la vision strategique et l'expertise de plus de 50 ans. Image
+d'illustration associee.
+3.9 Section Equipe (6 membres)
+Nom
+Poste
+Matthew Andrade
+PDG
+Sara Wood
+Gestion des risques
+Felix Mercer
+Expert comptable
+Guadalupe Bertrand
+Expert en marketing
+Michael Perry
+Leader d'equipe
+Alice McCoy
+HR Manager
+Photos individuelles avec effet hover.
+3.10 Section "L'avenir de l'investissement"
+Image d'illustration avec 4 sous-themes :
+ Les tendances qui redefinissent l'investissement
+ Le role croissant des technologies (IA, blockchain, big data)
+ L'importance des criteres ESG
+ De nouveaux profils d'investisseurs
+3.11 Section Temoignages (Carrousel)
+Nom
+Extrait du temoignage
+John Doe
+Accompagnement humain et professionnel, suivi personnalise
+Sharon Brinson
+Facilite et transparence, procedure claire
+Felix Mercer
+Pret obtenu en quelques jours, equipe a l'ecoute
+3.12 Footer
+ Logo "FINANSERVICES"
+ Description courte de l'entreprise
+ Informations legales : numero SIREN
+ Liens utiles vers les pages du site
+ Bouton CTA : "Apply for a Loan"
+ Widget de traduction multilingue (EN, FR, DE, IT, PT, ES, TR)
+4. PAGE SERVICES
+Banniere avec fil d'Ariane (Home > Services). Grille de 6 services en 3 colonnes x 2 lignes. Chaque
+carte contient : image, titre, extrait et lien vers page detaillee.
+Service
+Description
+Financement de projet
+Realiser vos ambitions entrepreneuriales
+Pret immobilier
+Projet immobilier en toute serenite
+Pret automobile
+Conduire votre vehicule en toute liberte
+Pret personnel
+Solution simple et rapide pour vos projets
+Business Consulting
+Decisions eclairees pour votre succes
+Insurance Planning
+Securiser votre avenir avec des choix informes
+5. PAGE DEMANDE DE PRET
+Formulaire multi-etapes comprenant les champs suivants :
+ Nom et prenom
+ Adresse email
+ Numero de telephone
+ Montant souhaite
+ Duree du pret
+ Type de pret (projet, immobilier, automobile, personnel)
+ Situation professionnelle
+ Message / informations complementaires
+6. PAGE A PROPOS
+Presentation detaillee de l'entreprise : historique, mission, valeurs. Section reprenant les elements
+de la page d'accueil (equipe, chiffres cles) avec plus de details.
+7. PAGE CONTACT
+Formulaire de contact avec les champs : nom, email, sujet, message. Coordonnees completes de
+l'entreprise. Carte Google Maps integree montrant l'adresse au 66 Avenue d'Iena, Paris.
+8. SPECIFICATIONS TECHNIQUES
+Aspect
+Detail
+CMS d'origine
+WordPress
+Design
+Responsive (mobile / tablette / desktop)
+Palette de couleurs
+Fond sombre (noir/gris fonce), texte blanc, accents dores
+Typographie
+Sans-serif professionnelle
+Animations
+Compteurs animes, carrousel hero, carrousel temoignages, hover cartes
+Multilingue
+Google Translate integre (7 langues)
+SEO
+Meta descriptions, titres optimises, structure semantique
+Performance
+Images optimisees, lazy loading
+9. ELEMENTS GRAPHIQUES
+ Logo "Subvention Projet" avec icone marine/ancre stylisee
+ Images professionnelles (reunions d'affaires, contexte financier)
+ Photos d'equipe (portraits individuels)
+ Icones : localisation, telephone, horloge, services financiers
+ Images de services (financement, immobilier, automobile, etc.)
+10. FONCTIONNALITES CLES
+1. Navigation responsive avec menu hamburger mobile
+2. Carrousel hero avec defilement automatique
+3. Compteurs animes (chiffres cles de l'entreprise)
+4. Carrousel de temoignages clients
+5. Grille de services avec pages detaillees individuelles
+6. Formulaire de demande de pret multi-etapes
+7. Formulaire de contact
+8. Traduction multilingue (7 langues)
+9. Boutons CTA strategiquement places ("Apply for a Loan")
+10. Page 404 personnalisee avec redirection vers l'accueil

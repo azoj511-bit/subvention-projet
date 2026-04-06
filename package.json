@@ -1,0 +1,13 @@
+{
+  "name": "subvention-projet",
+  "version": "1.0.0",
+  "description": "Professional financial services website",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
