@@ -47,7 +47,17 @@
                 <a href="index.html" class="logo">
                     <i class="fa-solid fa-anchor icon-logo"></i> SUBVENTION PROJET
                 </a>
-                <div class="gtranslate_wrapper custom-gtranslate"></div>
+                <div class="translate-box" style="display: flex; align-items: center; background: rgba(212, 175, 55, 0.15); border: 2px solid var(--accent-gold); padding: 5px 12px; border-radius: 25px; margin-left: 15px; animation: pulse 2s infinite;">
+                    <span style="font-weight: bold; color: var(--accent-gold); margin-right: 10px; font-size: 0.9rem;"><i class="fa-solid fa-language"></i> Traduire le site :</span>
+                    <div class="gtranslate_wrapper custom-gtranslate"></div>
+                </div>
+                <style>
+                    @keyframes pulse {
+                        0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+                        70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+                        100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+                    }
+                </style>
             </div>
             <div class="nav-right">
                 <ul class="nav-links">
@@ -147,24 +157,39 @@
                 <h4 style="font-family: var(--font-heading); color: var(--accent-gold); border-bottom: 1px solid #e0d8c0; padding-bottom: 10px; margin-bottom: 20px; margin-top: 30px;">
                     <i class="fa-solid fa-coins" style="margin-right: 8px;"></i> Détails du Prêt
                 </h4>
-                <div class="grid-2">
-                    <div class="form-group">
-                        <label class="form-label">Montant du prêt (€) <span style="color:red">*</span></label>
-                        <input type="number" id="loanAmount" class="form-control" min="1000" max="2000000" placeholder="Entre 1 000 et 2 000 000 €" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Durée de remboursement (Mois) <span style="color:red">*</span></label>
-                        <input type="number" id="loanDuration" class="form-control" required>
-                    </div>
-                </div>
                 <div class="form-group">
-                    <label class="form-label">Objet du prêt <span style="color:red">*</span></label>
+                    <label class="form-label">Type de service <span style="color:red">*</span></label>
                     <select id="loanType" class="form-control" required>
                         <option value="">Sélectionnez...</option>
-                        <option value="Consommation">Consommation</option>
-                        <option value="Immobilier">Immobilier</option>
+                        <option value="Prêt immobilier">Prêt immobilier</option>
+                        <option value="Automobile">Automobile</option>
+                        <option value="Financement non remboursable">Financement non remboursable</option>
                         <option value="Autre">Autre</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Montant souhaité (€) <span style="color:red">*</span></label>
+                    <input type="number" id="loanAmount" class="form-control" min="1000" max="2000000" placeholder="Entre 1 000 et 2 000 000 €" required>
+                </div>
+
+                <!-- Champs conditionnels pour Prêt (immobilier / automobile) -->
+                <div id="loanDurationGroup" class="form-group" style="display: none;">
+                    <label class="form-label">Durée du prêt (Mois) <span style="color:red">*</span></label>
+                    <input type="number" id="loanDuration" class="form-control" placeholder="Ex: 24, 60, 120...">
+                </div>
+
+                <!-- Champs conditionnels pour Financement non remboursable -->
+                <div id="financementGroup" style="display: none;">
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Durée totale du projet <span style="color:red">*</span></label>
+                            <input type="text" id="projectDuration" class="form-control" placeholder="Ex: 12 mois, 2 ans...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Date de début du projet <span style="color:red">*</span></label>
+                            <input type="date" id="projectStartDate" class="form-control">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- === Section 3: Situation Personnelle & Financière === -->

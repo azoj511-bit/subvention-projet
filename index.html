@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,15 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- Top Info Bar -->
     <div class="top-bar">
@@ -37,7 +41,17 @@
                 <a href="index.html" class="logo">
                     <i class="fa-solid fa-anchor icon-logo"></i> SUBVENTION PROJET
                 </a>
-                <div class="gtranslate_wrapper custom-gtranslate"></div>
+                <div class="translate-box" style="display: flex; align-items: center; background: rgba(212, 175, 55, 0.15); border: 2px solid var(--accent-gold); padding: 5px 12px; border-radius: 25px; margin-left: 15px; animation: pulse 2s infinite;">
+                    <span style="font-weight: bold; color: var(--accent-gold); margin-right: 10px; font-size: 0.9rem;"><i class="fa-solid fa-language"></i> Traduire le site :</span>
+                    <div class="gtranslate_wrapper custom-gtranslate"></div>
+                </div>
+                <style>
+                    @keyframes pulse {
+                        0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+                        70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+                        100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+                    }
+                </style>
             </div>
             <div class="nav-right">
                 <ul class="nav-links">
@@ -61,10 +75,12 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-overlay" style="background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 100%);"></div>
+        <div class="hero-overlay"
+            style="background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 100%);"></div>
         <div class="container hero-content">
             <h1 class="fade-in-up">Obtenez votre financement non remboursable</h1>
-            <p class="fade-in-up delay-1">Solutions de subventions rapides, fiables et non remboursables, sans paperasse inutile : satisfaction garantie.</p>
+            <p class="fade-in-up delay-1">Solutions de subventions rapides, fiables et non remboursables, sans paperasse
+                inutile : satisfaction garantie.</p>
             <a href="loan-application.html" class="btn btn-primary fade-in-up delay-2">Faire une Demande</a>
         </div>
     </header>
@@ -100,7 +116,7 @@
                 <h2>25 years of financial services</h2>
                 <div class="underline"></div>
             </div>
-            
+
             <div class="grid-4 mt-5">
                 <div class="card basic-card">
                     <h4>Financial Planning</h4>
@@ -129,13 +145,18 @@
                 <div class="about-text">
                     <span class="subtitle">À propos de nous</span>
                     <h2>Une expertise certifiée depuis plus de 50 ans</h2>
-                    <p>Notre entreprise accompagne les particuliers, les entreprises et les investisseurs avec des solutions adaptées et un taux de remboursement compétitif de 2%. Nous sommes votre partenaire pour l'avenir.</p>
-                    
+                    <p>Notre entreprise accompagne les particuliers, les entreprises et les investisseurs avec des
+                        solutions adaptées et un taux de remboursement compétitif de 2%. Nous sommes votre partenaire
+                        pour l'avenir.</p>
+
                     <ul class="benefits-list mt-3">
-                        <li><i class="fa-solid fa-check text-gold"></i> Flexible repayment - Remboursement à votre rythme</li>
-                        <li><i class="fa-solid fa-check text-gold"></i> Easy experience - Procédure adaptée à votre situation</li>
+                        <li><i class="fa-solid fa-check text-gold"></i> Flexible repayment - Remboursement à votre
+                            rythme</li>
+                        <li><i class="fa-solid fa-check text-gold"></i> Easy experience - Procédure adaptée à votre
+                            situation</li>
                         <li><i class="fa-solid fa-check text-gold"></i> Customer-oriented - Services sur mesure</li>
-                        <li><i class="fa-solid fa-check text-gold"></i> Rapid Mobility - Services accessibles partout</li>
+                        <li><i class="fa-solid fa-check text-gold"></i> Rapid Mobility - Services accessibles partout
+                        </li>
                     </ul>
                 </div>
                 <div class="stats-container">
@@ -166,7 +187,8 @@
     <section class="cta-section">
         <div class="container text-center">
             <h2>Besoin d'un coup de pouce pour vos projets ?</h2>
-            <p>Bénéficiez d'un financement non remboursable sans tracas. Notre processus est rapide, sécurisé et axé sur votre satisfaction.</p>
+            <p>Bénéficiez d'un financement non remboursable sans tracas. Notre processus est rapide, sécurisé et axé sur
+                votre satisfaction.</p>
             <a href="loan-application.html" class="btn btn-primary mt-3">Démarrer votre demande</a>
         </div>
     </section>
@@ -179,46 +201,58 @@
                 <h2>Nos Experts Financiers</h2>
                 <div class="underline"></div>
             </div>
-            
+
             <div class="team-grid mt-5">
                 <!-- Team Member -->
                 <div class="team-member">
-                    <div class="member-img" style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t7_360.jpg') center/cover; height: 300px;"></div>
+                    <div class="member-img"
+                        style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t7_360.jpg') center/cover; height: 300px;">
+                    </div>
                     <div class="member-info">
                         <h4>Matthew Andrade</h4>
                         <p>PDG</p>
                     </div>
                 </div>
                 <div class="team-member">
-                    <div class="member-img" style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t6_360.jpg') center/cover; height: 300px;"></div>
+                    <div class="member-img"
+                        style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t6_360.jpg') center/cover; height: 300px;">
+                    </div>
                     <div class="member-info">
                         <h4>Sara Wood</h4>
                         <p>Gestion des risques</p>
                     </div>
                 </div>
                 <div class="team-member">
-                    <div class="member-img" style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t5_360.jpg') center/cover; height: 300px;"></div>
+                    <div class="member-img"
+                        style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t5_360.jpg') center/cover; height: 300px;">
+                    </div>
                     <div class="member-info">
                         <h4>Felix Mercer</h4>
                         <p>Expert comptable</p>
                     </div>
                 </div>
                 <div class="team-member">
-                    <div class="member-img" style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t9_360.jpg') center/cover; height: 300px;"></div>
+                    <div class="member-img"
+                        style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t9_360.jpg') center/cover; height: 300px;">
+                    </div>
                     <div class="member-info">
                         <h4>Guadalupe Bertrand</h4>
                         <p>Expert en marketing</p>
                     </div>
                 </div>
                 <div class="team-member">
-                    <div class="member-img" style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t8_360.jpg') center/cover; height: 300px;"></div>
+                    <div class="member-img"
+                        style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t8_360.jpg') center/cover; height: 300px;">
+                    </div>
                     <div class="member-info">
                         <h4>Michael Perry</h4>
                         <p>Leader d'équipe</p>
                     </div>
                 </div>
                 <div class="team-member">
-                    <div class="member-img" style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t3_360.jpg') center/cover; height: 300px;"></div>
+                    <div class="member-img"
+                        style="background: url('https://subventionprojet.com/wp-content/uploads/2019/11/t3_360.jpg') center/cover; height: 300px;">
+                    </div>
                     <div class="member-info">
                         <h4>Alice McCoy</h4>
                         <p>HR Manager</p>
@@ -236,96 +270,134 @@
                 <h2>Ce que disent nos clients</h2>
                 <div class="underline"></div>
             </div>
-            
+
             <div class="testimonials-grid mt-5">
                 <div class="testimonial-card">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop" alt="Jean Dupont" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop"
+                            alt="Jean Dupont" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <div>
                             <h4 class="testimonial-author" style="margin-bottom: 2px;">Jean Dupont</h4>
                             <span class="testimonial-country">🇫🇷 France</span>
                         </div>
                     </div>
-                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="testimonial-text">"Un service rapide et transparent. J'ai pu obtenir le financement pour développer mon entreprise en quelques jours seulement. L'équipe a été très à l'écoute."</p>
+                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">"Un service rapide et transparent. J'ai pu obtenir le financement pour
+                        développer mon entreprise en quelques jours seulement. L'équipe a été très à l'écoute."</p>
                 </div>
                 <div class="testimonial-card">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop" alt="Sarah Jenkins" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop"
+                            alt="Sarah Jenkins"
+                            style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <div>
                             <h4 class="testimonial-author" style="margin-bottom: 2px;">Sarah Jenkins</h4>
                             <span class="testimonial-country">🇬🇧 Royaume-Uni</span>
                         </div>
                     </div>
-                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="testimonial-text">"The low 2% interest rate is unbeatable. Everything was handled online without unnecessary paperwork. Highly recommended for personal loans!"</p>
+                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">"The low 2% interest rate is unbeatable. Everything was handled online
+                        without unnecessary paperwork. Highly recommended for personal loans!"</p>
                 </div>
                 <div class="testimonial-card">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop" alt="Marco Rossi" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop"
+                            alt="Marco Rossi" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <div>
                             <h4 class="testimonial-author" style="margin-bottom: 2px;">Marco Rossi</h4>
                             <span class="testimonial-country">🇮🇹 Italie</span>
                         </div>
                     </div>
-                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
-                    <p class="testimonial-text">"Grazie a Subvention Projet ho potuto comprare la mia prima casa. Il processo è stato fluido e il consulente mi ha guidato passo dopo passo."</p>
+                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                    <p class="testimonial-text">"Grazie a Subvention Projet ho potuto comprare la mia prima casa. Il
+                        processo è stato fluido e il consulente mi ha guidato passo dopo passo."</p>
                 </div>
                 <div class="testimonial-card">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop" alt="Hans Müller" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop"
+                            alt="Hans Müller" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <div>
                             <h4 class="testimonial-author" style="margin-bottom: 2px;">Hans Müller</h4>
                             <span class="testimonial-country">🇩🇪 Allemagne</span>
                         </div>
                     </div>
-                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="testimonial-text">"Ich war skeptisch, aber das Geld war wirklich innerhalb von 48 Stunden auf meinem Konto. Sehr professionell und absolut seriös."</p>
+                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">"Ich war skeptisch, aber das Geld war wirklich innerhalb von 48 Stunden
+                        auf meinem Konto. Sehr professionell und absolut seriös."</p>
                 </div>
                 <div class="testimonial-card">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop" alt="Fatima El Amrani" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop"
+                            alt="Fatima El Amrani"
+                            style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <div>
                             <h4 class="testimonial-author" style="margin-bottom: 2px;">Fatima El Amrani</h4>
                             <span class="testimonial-country">🇧🇪 Belgique</span>
                         </div>
                     </div>
-                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="testimonial-text">"Excellent accompagnement pour mon crédit auto. Le taux de 2% m'a fait économiser des milliers d'euros par rapport à ma banque classique."</p>
+                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">"Excellent accompagnement pour mon crédit auto. Le taux de 2% m'a fait
+                        économiser des milliers d'euros par rapport à ma banque classique."</p>
                 </div>
                 <div class="testimonial-card">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop" alt="Carlos Silva" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
+                            alt="Carlos Silva"
+                            style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <div>
                             <h4 class="testimonial-author" style="margin-bottom: 2px;">Carlos Silva</h4>
                             <span class="testimonial-country">🇵🇹 Portugal</span>
                         </div>
                     </div>
-                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="testimonial-text">"O melhor parceiro financeiro que já encontrei. Sem taxas ocultas e um atendimento excepcional via WhatsApp. Super recomendado."</p>
+                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">"O melhor parceiro financeiro que já encontrei. Sem taxas ocultas e um
+                        atendimento excepcional via WhatsApp. Super recomendado."</p>
                 </div>
                 <!-- 2 New 'Financement Non Remboursable' Reviews -->
                 <div class="testimonial-card">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop" alt="Sophie Laurent" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop"
+                            alt="Sophie Laurent"
+                            style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <div>
                             <h4 class="testimonial-author" style="margin-bottom: 2px;">Sophie Laurent</h4>
                             <span class="testimonial-country">🇨🇦 Canada</span>
                         </div>
                     </div>
-                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="testimonial-text">"Je n'y croyais pas, mais j'ai effectivement reçu un financement non remboursable pour mon commerce en seulement 48h. Une aide inestimable pour moi !"</p>
+                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">"Je n'y croyais pas, mais j'ai effectivement reçu un financement non
+                        remboursable pour mon commerce en seulement 48h. Une aide inestimable pour moi !"</p>
                 </div>
                 <div class="testimonial-card">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop" alt="Lucas Dubois" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop"
+                            alt="Lucas Dubois"
+                            style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <div>
                             <h4 class="testimonial-author" style="margin-bottom: 2px;">Lucas Dubois</h4>
                             <span class="testimonial-country">🇨🇭 Suisse</span>
                         </div>
                     </div>
-                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="testimonial-text">"L'équipe m'a guidé pas à pas. L'obtention de ce financement non remboursable a été la bouffée d'oxygène dont mon entreprise avait besoin. Rapide et efficace !"</p>
+                    <div class="stars" style="margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">"L'équipe m'a guidé pas à pas. L'obtention de ce financement non
+                        remboursable a été la bouffée d'oxygène dont mon entreprise avait besoin. Rapide et efficace !"
+                    </p>
                 </div>
             </div>
         </div>
@@ -337,7 +409,8 @@
             <div class="footer-grid">
                 <div class="footer-col branding">
                     <h3><i class="fa-solid fa-anchor text-gold"></i> SUBVENTION PROJET</h3>
-                    <p>Votre partenaire financier de confiance, offrant des solutions rapides et flexibles avec un taux compétitif de 2%.</p>
+                    <p>Votre partenaire financier de confiance, offrant des solutions rapides et flexibles avec un taux
+                        compétitif de 2%.</p>
                 </div>
                 <div class="footer-col links">
                     <h4>Liens Utiles</h4>
@@ -353,7 +426,7 @@
                     <h4>Informations Légales</h4>
                     <p>Politique de confidentialité</p>
                     <p>Mentions légales</p>
-                    
+
                     <h4 class="mt-3">Infos Service</h4>
                     <p><i class="fa-solid fa-envelope text-gold"></i> subventionprojet@outlook.fr</p>
                 </div>
@@ -361,7 +434,8 @@
                     <h4>Besoin d'un prêt ?</h4>
                     <a href="loan-application.html" class="btn btn-primary sm-btn">Apply Now</a>
                     <div class="mt-3">
-                        <a href="https://wa.me/33757756283" class="btn btn-whatsapp sm-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp</a>
+                        <a href="https://wa.me/33757756283" class="btn btn-whatsapp sm-btn" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i> Chat WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -373,15 +447,16 @@
 
     <!-- GTranslate Script & Configuration -->
     <script>
-    window.gtranslateSettings = {
-        "default_language": "fr",
-        "languages": ["fr", "en", "it", "es", "pt", "de", "hu", "ro", "sk"],
-        "wrapper_selector": ".gtranslate_wrapper"
-    };
+        window.gtranslateSettings = {
+            "default_language": "fr",
+            "languages": ["fr", "en", "it", "es", "pt", "de", "hu", "ro", "sk"],
+            "wrapper_selector": ".gtranslate_wrapper"
+        };
     </script>
     <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
-    
+
     <!-- Main JS -->
     <script src="js/main.js"></script>
 </body>
+
 </html>
