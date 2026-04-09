@@ -85,6 +85,44 @@ if (contactForm) {
     });
 }
 
+const loanTypeSelect = document.getElementById('loanType');
+const loanDurationGroup = document.getElementById('loanDurationGroup');
+const financementGroup = document.getElementById('financementGroup');
+
+if (loanTypeSelect) {
+    loanTypeSelect.addEventListener('change', function() {
+        const type = this.value;
+        if (type === 'Prêt immobilier' || type === 'Automobile' || type === 'Autre') {
+            loanDurationGroup.style.display = 'block';
+            document.getElementById('loanDuration').required = true;
+            
+            if (financementGroup) {
+                financementGroup.style.display = 'none';
+                document.getElementById('projectDuration').required = false;
+                document.getElementById('projectStartDate').required = false;
+            }
+        } else if (type === 'Financement non remboursable') {
+            loanDurationGroup.style.display = 'none';
+            document.getElementById('loanDuration').required = false;
+            
+            if (financementGroup) {
+                financementGroup.style.display = 'block';
+                document.getElementById('projectDuration').required = true;
+                document.getElementById('projectStartDate').required = true;
+            }
+        } else {
+            loanDurationGroup.style.display = 'none';
+            document.getElementById('loanDuration').required = false;
+            
+            if (financementGroup) {
+                financementGroup.style.display = 'none';
+                document.getElementById('projectDuration').required = false;
+                document.getElementById('projectStartDate').required = false;
+            }
+        }
+    });
+}
+
 const loanForm = document.getElementById('loanForm');
 if (loanForm) {
     loanForm.addEventListener('submit', function(e) {
@@ -99,7 +137,9 @@ if (loanForm) {
         const phone = document.getElementById('loanPhone').value;
         const email = document.getElementById('loanEmail').value;
         const amount = document.getElementById('loanAmount').value;
-        const duration = document.getElementById('loanDuration').value;
+        const duration = document.getElementById('loanDuration') ? document.getElementById('loanDuration').value : '';
+        const projectDuration = document.getElementById('projectDuration') ? document.getElementById('projectDuration').value : '';
+        const projectStartDate = document.getElementById('projectStartDate') ? document.getElementById('projectStartDate').value : '';
         const type = document.getElementById('loanType').value;
         const job = document.getElementById('loanJob').value;
         const marital = document.getElementById('loanMarital').value;
@@ -121,9 +161,18 @@ if (loanForm) {
             `*E-Mail* : ${email}\n\n` +
             `*— Détails du Prêt —*\n` +
             `*Montant souhaité* : ${amount} €\n` +
-            `*Durée de remboursement* : ${duration} mois\n` +
-            `*Objet du prêt* : ${type}\n\n` +
-            `*— Situation Personnelle & Financière —*\n` +
+            `*Type de service* : ${type}\n`;
+
+        if (type === 'Financement non remboursable') {
+            text += `*Durée totale du projet* : ${projectDuration}\n` +
+                    `*Date de début* : ${projectStartDate}\n\n`;
+        } else if (type === 'Prêt immobilier' || type === 'Automobile' || type === 'Autre') {
+            text += `*Durée du prêt* : ${duration} mois\n\n`;
+        } else {
+            text += `\n`;
+        }
+
+        text += `*— Situation Personnelle & Financière —*\n` +
             `*Situation Professionnelle* : ${job}\n` +
             `*Situation Matrimoniale* : ${marital}\n` +
             `*Revenu mensuel* : ${income} €\n\n` +
